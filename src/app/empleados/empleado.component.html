@@ -1,25 +1,34 @@
 <h1 style='color: blue;'>{{titulo}}</h1>
 
-<label class="container"> 
- 
+<label class="container">  
 <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
  <span *ngIf="trabajadorExterno == true">Es </span><span *ngIf="trabajadorExterno == false">No es </span> 
   <span class="checkmark"></span>trabajador
 </label>
 
-<strong>Lista de Empleados: </strong>
+<strong>Empleado: </strong>
 <br />
 <br />
-<div style="background-color: #DBF1F5" *ngIf="trabajadorExterno == true">
-  <li>{{empleado.nombre}}</li>
-  <li>{{empleado.edad}}</li>
-  <li>{{empleado.cargo}}</li>
-  <li>{{empleado.contratado}}</li>
+<div class="default active1" *ngIf="trabajadorExterno == true">
+      <li>{{empleado.nombre}}</li>
+      <li>{{empleado.edad}}</li>
+      <li>{{empleado.cargo}}</li>
+      <li>{{empleado.contratado}}</li>
+      <li *ngIf="empleado.contratado == true">Está contratado</li>
+      <li *ngIf="empleado.contratado == false">No está contratado</li>
 </div>
 <br />
-<div style="background-color: #FBC8B6" *ngIf="trabajadorExterno == false">
-  <li>{{trabajadores[0].nombre}}</li>
-  <li>{{trabajadores[0].edad}}</li>
-  <li>{{trabajadores[0].cargo}}</li>
-  <li>{{trabajadores[0].contratado}}</li>
+
+<strong>Lista de trabajadores: </strong>
+<div *ngFor="let trabajador  of trabajadores; let i = index">
+   <div  class="default" [ngClass]="{'active1': trabajador.contratado == true, 'active2' : trabajador.contratado == false, 'hide': trabajador.contratado != trabajadorExterno }" >
+    <ul>
+       <strong>Empleado {{i + 1}}</strong>
+        <li>{{trabajador.nombre}}</li>
+        <li>{{trabajador.edad}}</li>
+        <li>{{trabajador.cargo}}</li>
+        <li *ngIf="trabajador.contratado == true">Está contratado</li>
+        <li *ngIf="trabajador.contratado == false">No está contratado</li>
+      </ul>
+    </div>
 </div>

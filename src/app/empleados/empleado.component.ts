@@ -19,7 +19,8 @@ export class EmpleadoComponent{
     this.trabajadores = [
       new Empleado('Luis', 39, 'Programador', false),
       new Empleado('Pedro', 42, 'Analista', true),
-      new Empleado('Yazmin', 28, 'Tester', true),
+      new Empleado('Yazmin', 28, 'Tester', false),
+      new Empleado('Felipe', 54, 'Tester', false),
       new Empleado('Paola', 20, 'Becaria', true)
     ];
 
