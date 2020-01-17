@@ -1,14 +1,25 @@
 <h1 style='color: blue;'>{{titulo}}</h1>
 
+<label class="container"> 
+ 
+<input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+ <span *ngIf="trabajadorExterno == true">Es </span><span *ngIf="trabajadorExterno == false">No es </span> 
+  <span class="checkmark"></span>trabajador
+</label>
+
 <strong>Lista de Empleados: </strong>
 <br />
 <br />
-<li>{{empleado.nombre}}</li>
-<li>{{empleado.edad}}</li>
-<li>{{empleado.cargo}}</li>
-<li>{{empleado.contratado}}</li>
+<div style="background-color: #DBF1F5" *ngIf="trabajadorExterno == true">
+  <li>{{empleado.nombre}}</li>
+  <li>{{empleado.edad}}</li>
+  <li>{{empleado.cargo}}</li>
+  <li>{{empleado.contratado}}</li>
+</div>
 <br />
-<li>{{trabajadores[0].nombre}}</li>
-<li>{{trabajadores[0].edad}}</li>
-<li>{{trabajadores[0].cargo}}</li>
-<li>{{trabajadores[0].contratado}}</li>
+<div style="background-color: #FBC8B6" *ngIf="trabajadorExterno == false">
+  <li>{{trabajadores[0].nombre}}</li>
+  <li>{{trabajadores[0].edad}}</li>
+  <li>{{trabajadores[0].cargo}}</li>
+  <li>{{trabajadores[0].contratado}}</li>
+</div>
