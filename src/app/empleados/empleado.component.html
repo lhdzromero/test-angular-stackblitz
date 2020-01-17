@@ -22,7 +22,8 @@
 <strong>Lista de trabajadores: </strong>
 <div *ngFor="let trabajador  of trabajadores; let i = index">
    <div  class="default" [ngClass]="{'active1': trabajador.contratado == true, 'active2' : trabajador.contratado == false, 'hide': trabajador.contratado != trabajadorExterno }" >
-    <ul>
+    <!--<ul *ngIf="trabajadorExterno == trabajador.contratado">-->
+      <ul>
        <strong>Empleado {{i + 1}}</strong>
         <li>{{trabajador.nombre}}</li>
         <li>{{trabajador.edad}}</li>
