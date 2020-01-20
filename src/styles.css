@@ -1,1 +1,15 @@
 /* Add application styles & imports to this file! */
+.fondoAzul{
+  background: lightblue;
+}
+
+.defaultFondo{
+  background: #DCCCCC;
+  padding: 25px;
+}
+
+.defaultLetra{
+  color:black;
+  font-size: 14px;
+  font-style: italic;
+}
