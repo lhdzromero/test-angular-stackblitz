@@ -1,1 +1,9 @@
 <h2>{{titulo}}</h2>
+
+<span *ngIf="parametro">Page: {{parametro}} </span>
+
+<div *ngIf="!parametro" >
+  <button (click)="redirigir()">Ir a la página con parametro</button>
+  &nbsp;
+  <button (click)="redirigirHome()">Ir a home</button>
+</div>

@@ -33,7 +33,7 @@ export class EmpleadoComponent{
     console.log(this.trabajadores);
   }
 
-toggleVisibility(e){
+  toggleVisibility(e){
     this.trabajadorExterno = e.target.checked;
   }
 
