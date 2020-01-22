@@ -9,12 +9,13 @@ import { HelloComponent } from './hello.component';
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleados/empleado.component';
 import { VideojuegosComponent } from './videojuegos/videojuegos.component';
-
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, routing ],
-  declarations: [ AppComponent, 
+  declarations: [ AppComponent,
+                  HomeComponent,
                   HelloComponent,
                   FrutaComponent,
                   EmpleadoComponent,

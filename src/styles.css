@@ -13,3 +13,15 @@
   font-size: 14px;
   font-style: italic;
 }
+
+a{
+  color: blue;
+  font-style: initial;
+  font-stretch: semi-expanded;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 7px;
+  border: 1px;
+  border-style: solid;
+  margin: 9px;
+  
+}
