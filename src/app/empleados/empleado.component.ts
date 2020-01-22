@@ -13,7 +13,7 @@ export class EmpleadoComponent{
   public trabajadores:Array<Empleado>;
   public trabajadorExterno:boolean;
   public theCheckbox = false;
-  public color:String;
+
 
   constructor(){
     this.empleado = new Empleado('Veronica', 45, 'Cocinera', true);
@@ -25,7 +25,6 @@ export class EmpleadoComponent{
       new Empleado('Paola', 20, 'Becaria', true)
     ];
     this.trabajadorExterno = false;
-    this.color = 'green';
   }
 
   ngOnInit(){

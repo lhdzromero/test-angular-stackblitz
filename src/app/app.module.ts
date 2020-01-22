@@ -11,12 +11,14 @@ import { EmpleadoComponent } from './empleados/empleado.component';
 import { VideojuegosComponent } from './videojuegos/videojuegos.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ColorComponent } from './color/color.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, routing ],
   declarations: [ AppComponent,
                   HomeComponent,
                   ContactoComponent,
+                  ColorComponent,
                   HelloComponent,
                   FrutaComponent,
                   EmpleadoComponent,
