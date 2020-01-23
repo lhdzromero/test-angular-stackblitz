@@ -9,15 +9,28 @@ import { RopaService } from '../services/ropa.service';
 
 export class HomeComponent{
   titulo = 'Página Principal';
+  public listadoRopa:Array<string>;
+  public prendaAGuardar:string;
 
   constructor(
      private _ropaService: RopaService
   ){}
 
-ngOnInit(){
-  console.log(this._ropaService.GetNombrePrenda());
+  ngOnInit(){
+    this.listadoRopa = this._ropaService.getRopa();
 
-  this._ropaService.PrintPrenda('Camisa');
-}
+    console.log(this._ropaService.GetNombrePrenda());
+    this._ropaService.PrintPrenda('Camisa');
+    console.log(this.listadoRopa);
+  }
+
+  guardarPrenda(){
+    this._ropaService.addRopa(this.prendaAGuardar);
+    this.prendaAGuardar = null;
+  }
+
+  eliminarPrenda(index:number){
+    this._ropaService.deleteRopa(index);
+  }
 
 }
