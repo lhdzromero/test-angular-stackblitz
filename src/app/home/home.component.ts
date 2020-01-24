@@ -12,9 +12,16 @@ export class HomeComponent{
   public listadoRopa:Array<string>;
   public prendaAGuardar:string;
 
+  public fecha;
+
+  public nombre;
+
   constructor(
      private _ropaService: RopaService
-  ){}
+  ){
+    this.fecha = new Date();
+    this.nombre = 'Luis Aidan';
+  }
 
   ngOnInit(){
     this.listadoRopa = this._ropaService.getRopa();

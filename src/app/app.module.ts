@@ -12,6 +12,11 @@ import { VideojuegosComponent } from './videojuegos/videojuegos.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ColorComponent } from './color/color.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+
+//pipes
+import { ConversorPipe } from './pipes/conversor.pipe';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, routing ],
@@ -22,7 +27,10 @@ import { ColorComponent } from './color/color.component';
                   HelloComponent,
                   FrutaComponent,
                   EmpleadoComponent,
-                  VideojuegosComponent ],
+                  VideojuegosComponent,
+                  CalculatorComponent,
+                  ConversorPipe,
+                  ExponentialStrengthPipe ],
   providers:    [appRoutingProviders],
   bootstrap:    [ AppComponent ]
 })
