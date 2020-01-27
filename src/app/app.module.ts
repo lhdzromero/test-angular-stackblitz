@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ColorComponent } from './color/color.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CochesComponent } from './coches/coches.component';
 
 //pipes
 import { ConversorPipe } from './pipes/conversor.pipe';
@@ -30,6 +31,7 @@ import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
                   VideojuegosComponent,
                   CalculatorComponent,
                   ConversorPipe,
+                  CochesComponent,
                   ExponentialStrengthPipe ],
   providers:    [appRoutingProviders],
   bootstrap:    [ AppComponent ]
